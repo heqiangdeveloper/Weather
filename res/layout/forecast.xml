@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <!-- part1 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/date_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000-00-00"
+                android:textSize="15sp"
+                android:textColor="#A2CADD" />
+
+            <TextView
+                android:id="@+id/day_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/date_day_divide"
+                android:text="000"
+                android:textSize="15sp"
+                android:textColor="#A2CADD" />
+            
+            <TextView
+                android:id="@+id/time_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/date_day_divide"
+                android:text="000"
+                android:textSize="15sp"
+                android:textColor="#fff" />
+        </LinearLayout>        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/temperatureLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="29"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/part1_text_size_temp" />
+
+	            <TextView
+	                android:id="@+id/danwei"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:paddingTop="@dimen/danweipadding"
+	                android:text="°"
+	                android:textColor="#fff"
+	                android:textSize="@dimen/part1_text_size_unit"
+	                android:textStyle="bold" />
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+	            
+                <TextView
+                    android:id="@+id/weathertextLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:paddingTop="@dimen/danweipadding"
+                    android:text="多云"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/part1_text_size_desc" />
+
+                <com.heqiang.weather.MarqueeTextView 
+	                android:id="@+id/cityLabel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="@dimen/danweipadding"
+	                android:gravity="top"
+	                android:textColor="#A2CADD"
+	                android:singleLine="true"
+	                android:scrollbars="none"
+	                android:textSize="@dimen/part1_text_size_desc"
+	                android:text="西宁"/>
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            
+
+            <LinearLayout
+                android:id="@+id/describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/danwei"
+                android:layout_alignTop="@id/danwei"
+                android:layout_marginLeft="@dimen/describemargin"
+                android:layout_toRightOf="@id/danwei"
+                android:orientation="vertical" >
+
+                
+            </LinearLayout>
+        </RelativeLayout>-->
+    </LinearLayout>
+    <!-- divide line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line"
+        android:background="#fff"
+        android:orientation="vertical" ></LinearLayout>
+        
+    <!-- part2 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/realfeel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/part2_text_size_title" />
+
+            <TextView
+                android:id="@+id/realfeel_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:singleLine="true"
+                android:textSize="@dimen/part2_text_size"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/realfeel_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/c"
+                android:textColor="#A2CADD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/humidity"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/part2_text_size_title" />
+
+            <TextView
+                android:id="@+id/humidity_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:singleLine="true"
+                android:textSize="@dimen/part2_text_size"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/percent"
+                android:textColor="#A2CADD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/windspeed"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/part2_text_size_title" />
+
+            <TextView
+                android:id="@+id/windspeed_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:singleLine="true"
+                android:textSize="@dimen/part2_text_size"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/windspeed_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/kmspeed"
+                android:textColor="#A2CADD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/visibility"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/part2_text_size_title" />
+
+            <TextView
+                android:id="@+id/visibility_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:singleLine="true"
+                android:textSize="@dimen/part2_text_size"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/visibility_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/kmvisible"
+                android:textColor="#A2CADD" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- divide line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line"
+        android:background="#fff"
+        android:orientation="vertical" ></LinearLayout>
+    <!-- part3 -->
+    
+    <LinearLayout        
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical" >
+        <!-- day1 -->
+        <LinearLayout
+            android:id="@+id/day1_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/Tv_week1_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/part3_text_size" />
+
+            <ImageView
+                android:id="@+id/Iv_day1_forecast"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            
+            <com.heqiang.weather.MarqueeTextView 
+                android:id="@+id/marqweathertxt1"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:scrollbars="none"
+                android:textSize="@dimen/part3_text_size"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_high1_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#A2CADD" />
+                
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_low1_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+            </LinearLayout>
+        </LinearLayout>
+        <!-- day2 -->
+        <LinearLayout
+            android:id="@+id/day2_linear"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Tv_week2_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/part3_text_size" />
+
+            <ImageView
+                android:id="@+id/Iv_day2_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            
+            <com.heqiang.weather.MarqueeTextView 
+                android:id="@+id/marqweathertxt2"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:scrollbars="none"
+                android:textSize="@dimen/part3_text_size"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_high2_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#A2CADD" />
+                
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_low2_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+            </LinearLayout>
+        </LinearLayout>
+        <!-- day3 -->
+        <LinearLayout
+            android:id="@+id/day3_linear"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Tv_week3_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/part3_text_size" />
+
+            <ImageView
+                android:id="@+id/Iv_day3_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            
+            <com.heqiang.weather.MarqueeTextView 
+                android:id="@+id/marqweathertxt3"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:scrollbars="none"
+                android:textSize="@dimen/part3_text_size"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_high3_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#A2CADD" />
+                
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_low3_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+            </LinearLayout>
+        </LinearLayout>
+        <!-- day4 -->
+        <LinearLayout
+            android:id="@+id/day4_linear"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Tv_week4_forecast"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:textSize="@dimen/part3_text_size" />
+
+            <ImageView
+                android:id="@+id/Iv_day4_forecast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1" />
+            
+            <com.heqiang.weather.MarqueeTextView 
+                android:id="@+id/marqweathertxt4"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:scrollbars="none"
+                android:textSize="@dimen/part3_text_size"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_high4_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#A2CADD" />
+                
+                <TextView
+                    android:textSize="@dimen/part3_text_size"
+                    android:id="@+id/Tv_low4_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°"
+                    android:textColor="#fff" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- part4 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+        
+    </LinearLayout>
+
+</LinearLayout>

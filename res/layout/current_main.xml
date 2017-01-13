@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+    
+    <ImageView 
+        android:contentDescription="@string/desc2"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    
+    <VideoView
+	    android:id="@+id/videoView"
+	    android:layout_margin="0dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone"/> 
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    android:layout_marginLeft="@dimen/rootmargin"
+	    android:layout_marginRight="@dimen/rootmargin"
+	    android:layout_marginTop="@dimen/rootmargintop" />
+
+    <TextView 
+        android:id="@+id/moreTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/more_margintop"
+        android:layout_marginRight="@dimen/more_marginright"
+        android:text="@string/more"
+        android:clickable="true"
+        android:textColor="#fff"
+        android:layout_gravity="end|top"/>
+    
+    <ImageView
+        android:contentDescription="@string/desc"
+        android:id="@+id/menu"
+        android:layout_marginTop="@dimen/rootmargintop"
+        android:layout_marginRight="@dimen/rootmargin_menu"
+        android:layout_width="@dimen/menu_size"
+        android:layout_height="@dimen/menu_size"
+        android:layout_gravity="end|top"
+        android:clickable="true"
+        android:src="@drawable/ic_menu" />    
+    
+    <LinearLayout 
+        android:id="@+id/popup_menu_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/rootmargintop"
+        android:layout_marginRight="@dimen/rootmargin"
+        android:layout_gravity="end|top">
+        <include layout="@layout/popup_menu"/>              
+	</LinearLayout>
+	
+    <LinearLayout
+        android:id="@+id/root_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/root_height"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>   
+
+</FrameLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/small_widget_height"
+    android:layout_margin="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="#00f"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/no_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:textColor="#fff"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_data_string"/>
+        
+    <LinearLayout
+        android:id="@+id/has_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" 
+        android:visibility="visible">
+
+        <!-- part1 -->
+
+        <RelativeLayout
+            android:id="@+id/small_widget_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/small_widget_temp_data"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_widget_height"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="19"
+                android:textColor="#fff"
+                android:textSize="@dimen/temp_data_text_size" />
+
+            <TextView
+                android:id="@+id/small_widget_temp_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_widget_height_half"
+                android:layout_toRightOf="@id/small_widget_temp_data"
+                android:gravity="center"
+                android:paddingTop="@dimen/danweipadding"
+                android:text="°"
+                android:textColor="#fff"
+                android:textSize="@dimen/temp_sign_text_size" />
+
+            <TextView
+                android:id="@+id/small_widget_temp_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_widget_height_half"
+                android:layout_below="@id/small_widget_temp_sign"
+                android:layout_toRightOf="@id/small_widget_temp_data"
+                android:gravity="top|center_horizontal"
+                android:text="C"
+                android:textColor="#fff"
+                android:textSize="@dimen/temp_unit_text_size" />
+        </RelativeLayout>
+        <!-- part2 -->
+
+        <RelativeLayout
+            android:id="@+id/small_widget_details"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:paddingLeft="@dimen/small_widget_details_padding" >
+
+            <TextView
+                android:id="@+id/small_widget_details_weatherText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_widget_height_half"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="多云"
+                android:textColor="#fff"
+                android:textSize="@dimen/temp_unit_text_size" />
+
+            <TextView
+                android:id="@+id/small_widget_details_cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/small_widget_height_half"
+                android:layout_below="@id/small_widget_details_weatherText"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="惠州"
+                android:textColor="#A2CADD"
+                android:textSize="@dimen/temp_unit_text_size" />
+        </RelativeLayout>
+        <!-- part3 -->
+
+        <RelativeLayout
+            android:id="@+id/small_widget_icon"
+            android:layout_width="@dimen/small_widget_height"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:gravity="right|center_vertical" >
+
+            <ImageView
+                android:id="@+id/small_widget_weather_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

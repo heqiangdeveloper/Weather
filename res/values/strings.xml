@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">MyWeather</string>
+    <string name="hello">Hello World, WeatherActivity!</string>
+    <string name="input_hint">请输入城市名</string>
+    <string name="network_error">无法连接网络，请检查网络！</string>
+    <string name="refresh_fail">更新天气失败！</string>
+    <string name="refresh_success">更新天气成功！</string>
+    <string name="no_city">没有找到该城市！</string>
+    <string name="auto_fail">自动定位失败！</string>
+    <string name="auto_success">自动定位成功！</string>
+    <string name="no_currentconditions">获取该城市的天气失败！</string>
+    <string name="getting">获取中...</string>
+    <string name="autoing">定位中...</string>
+    <string name="update">更新中...</string>
+    <string name="realfeel">体感温度</string>
+    <string name="humidity">湿度</string>
+    <string name="windspeed">风力</string>
+    <string name="visibility">可见度</string>
+    <string name="f">℉</string>
+    <string name="c">℃</string>
+    <string name="char_f">F</string>
+    <string name="char_c">C</string>
+    <string name="percent">%</string>
+    <string name="kmspeed">公里/小时</string>
+    <string name="mispeed">英里/小时</string>
+    <string name="kmvisible">公里</string>
+    <string name="mivisible">英里</string>    
+        
+    <string name="sunday">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="add_location">添加位置</string>
+    <string name="delete_location">删除位置</string>
+    <string name="refresh">刷新</string>
+    <string name="change_to_f">切换到℉</string>
+    <string name="change_to_c">切换到℃</string>
+    <string name="change_to_mi">切换到英里</string>
+    <string name="change_to_km">切换到公里</string>
+    <string name="over_max_city_warning">最多只能添加6座城市</string>
+    <string name="more">详情>></string>
+    <string name="no_data_string">没有天气数据!请点击获取...</string>
+    <string name="desc">菜单图片</string>
+    <string name="desc2">背景图片 </string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auto_btn_margin">15dp</dimen>
+    <dimen name="list_separate">50dp</dimen>
+    <dimen name="rootmargin">15dp</dimen>
+    <dimen name="rootmargin_menu">3dp</dimen>
+    <dimen name="rootmargintop">25dp</dimen>
+    <dimen name="more_margintop">50dp</dimen>
+    <dimen name="more_marginright">35dp</dimen>
+    <dimen name="describemargin">0dp</dimen>
+    <dimen name="danweipadding">10dp</dimen>
+    <dimen name="small_widget_details_padding">10dp</dimen>
+    <dimen name="divide">0dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="item_height">40dp</dimen>
+    <dimen name="root_height">30dp</dimen>
+    <dimen name="date_day_divide">10dp</dimen>
+    <dimen name="weather_data_margin_top">10dp</dimen>
+    <dimen name="city_name_size">20sp</dimen>
+    <dimen name="list_city_padding_left">3dp</dimen>
+    <dimen name="temp_data_text_size">50sp</dimen>
+    <dimen name="temp_sign_text_size">30sp</dimen>
+    <dimen name="temp_unit_text_size">16sp</dimen>
+    <dimen name="small_widget_height">72dp</dimen>
+    <dimen name="small_widget_height_half">36dp</dimen>
+    <dimen name="menu_size">30dp</dimen>
+    <dimen name="high_divide_low">10dp</dimen>
+    <dimen name="divide_line">0.1px</dimen>
+    <dimen name="part1_text_size_temp">70sp</dimen>
+    <dimen name="part1_text_size_unit">33sp</dimen>
+    <dimen name="part1_text_size_desc">25sp</dimen>
+    <dimen name="part2_text_size">30sp</dimen>
+    <dimen name="part2_text_size_title">18sp</dimen>
+    <dimen name="part3_text_size">12sp</dimen>
+</resources>
